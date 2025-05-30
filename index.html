@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Knight's Tower</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🏰 Knight's Tower</h1>
+  <div id="timer">⏱ Time: 0s</div>
+  <div class="container">
+    <div id="game-board"></div>
+
+    <aside id="sidebar">
+      <h2>Rules & Logic</h2>
+      <p>
+        Move the knight (♞) like in chess: two squares in one direction and one in the
+        perpendicular direction.
+      </p>
+      <p>
+        Each visited square is numbered in the order you visit it. You cannot revisit any
+        square.
+      </p>
+      <p>
+        The game ends when you cannot make any valid moves.
+      </p>
+      <h3>Math Behind the Puzzle</h3>
+      <ul>
+        <li>The Knight’s Tour is a classic mathematical problem dating back to Euler.</li>
+        <li>The challenge is to visit every square exactly once using valid knight moves.</li>
+        <li>This relates to graph theory: each square is a node, and valid moves form edges.</li>
+        <li>Finding a complete tour is like finding a Hamiltonian path in this graph.</li>
+     </ul>
+
+    </aside>
+  </div>
+  <label for="board-size">Choose Board Size: </label>
+<select id="board-size" class="grid-size-select">
+  <option value="6">6 x 6</option>
+  <option value="7">7 x 7</option>
+  <option value="8" selected>8 x 8</option>
+</select>
+
+  <div id="game-over-banner" class="hidden">
+    <p>♞ Game Over! No more valid moves.</p>
+    <button id="restart-btn">Restart</button>
+  </div>
+  
+      
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
